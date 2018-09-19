@@ -21,3 +21,5 @@ matomo_db_options:
   password: "{{ matomo_db_password }}"
 
 console_install: true
+
+apache_restart_state: restarted

@@ -42,7 +42,5 @@
   tags:
     - matomo
     - matomo-db
-  when: console_install == 'true'
-
 
 
