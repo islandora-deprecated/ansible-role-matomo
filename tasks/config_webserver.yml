@@ -1,0 +1,16 @@
+
+- name: Install matomo httpd config file
+  template:
+    src: "matomo.conf.j2"
+    dest: "{{httpd_conf_directory}}/conf-available/matomo.conf"
+    owner: "{{ matomo_user }}"
+    group: "{{ matomo_user }}"
+
+- name: Symlink matomo httpd config file into action
+  file:
+    src: "{{httpd_conf_directory}}/conf-available/matomo.conf"
+    dest: "{{httpd_conf_directory_enabled}}/matomo.conf"
+    owner: "{{ matomo_user }}"
+    group: "{{ matomo_user }}"
+    state: link
+  notify: restart apache
