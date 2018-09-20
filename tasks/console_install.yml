@@ -3,7 +3,7 @@
 - name: prepare mysql dump restore
   template:
     src: "matomo.sql.j2"
-    dest: "{{ webserver_document_root }}/motomo.sql"
+    dest: "{{ webserver_document_root }}/matomo.sql"
     owner: "{{ matomo_user }}"
     group: "{{ matomo_user }}"
     force: no
