@@ -12,7 +12,7 @@
 - name: restore dump
   mysql_db:
     name: "{{ matomo_db_name }}"
-    target: "{{ webserver_document_root }}/motomo.sql"
+    target: "{{ webserver_document_root }}/matomo.sql"
     state: import
   ignore_errors: yes
   when: motomo_sql_dump_create | changed
