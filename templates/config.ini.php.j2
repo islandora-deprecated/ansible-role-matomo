@@ -1,16 +1,16 @@
 ; <?php exit; ?> DO NOT REMOVE THIS LINE
 ; file automatically generated or modified by Matomo; you can manually override the default values in global.ini.php by redefining them in this file.
 [database]
-host = "127.0.0.1"
-username = "matomo"
-password = "islandora"
-dbname = "matomo"
+host = {{ matomo_host }}
+username = {{ matomo_db_user }}
+password = {{ matomo_db_password }}
+dbname = {{ matomo_db_name }}
 tables_prefix = "matomo_"
 
 [General]
 salt = "bc32ffdbba9cb51a7886fd3f5d8e2ff6"
 trusted_hosts[] = "localhost"
-trusted_hosts[] = "{{ ansible_ssh_host }}:8000"
+trusted_hosts[] = "{{ matomo_host }}:8000"
 
 [PluginsInstalled]
 PluginsInstalled[] = "Diagnostics"

@@ -1,7 +1,9 @@
 # Install location
+
+matomo_host: localhost
 webserver_document_root: /var/www/html
 matomo_install_dir: /var/www/html/matomo
-matomo_base_url: http://localhost:8080/matomo
+matomo_base_url: "http://{{ matomo_host }}:8080/matomo"
 
 # Install options
 console_install: true
