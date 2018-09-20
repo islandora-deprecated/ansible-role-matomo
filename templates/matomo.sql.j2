@@ -741,7 +741,7 @@ CREATE TABLE `matomo_user` (
 
 LOCK TABLES `matomo_user` WRITE;
 /*!40000 ALTER TABLE `matomo_user` DISABLE KEYS */;
-INSERT INTO `matomo_user` VALUES ('{{ matomo_admin_user }}',MD5'{{ matomo_admin_user_password }}','{{ matomo_admin_user }}','{{ matomo_admin_user_email }}','7165b664aadfcf9d95532cb6e0879275',1,'2018-09-19 19:05:27','2018-09-19 19:05:27'),('anonymous','','anonymous','anonymous@example.org','anonymous',0,'2018-09-19 19:04:56','2018-09-19 19:04:56');
+INSERT INTO `matomo_user` VALUES ('{{ matomo_admin_user }}','{{ matomo_admin_user_password }}','{{ matomo_admin_user }}','{{ matomo_admin_user_email }}','7165b664aadfcf9d95532cb6e0879275',1,'2018-09-19 19:05:27','2018-09-19 19:05:27'),('anonymous','','anonymous','anonymous@example.org','anonymous',0,'2018-09-19 19:04:56','2018-09-19 19:04:56');
 /*!40000 ALTER TABLE `matomo_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
