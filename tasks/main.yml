@@ -1,7 +1,7 @@
 ---
 
 - name: Include OS-specific variables
-  include_vars: "{{ ansible_os_family}}.yml"
+  include_vars: "{{ ansible_os_family }}.yml"
 
 - name: Define matomo_user
   set_fact:
@@ -25,8 +25,6 @@
     - matomo
     - matomo-db
   when: matomo_db == 'pgsql'
-  become_user: "{{ matomo_pgsql_user }}"
-  become: yes
 
 - include_tasks: download.yml
   tags:
