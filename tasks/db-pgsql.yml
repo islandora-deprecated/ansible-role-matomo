@@ -1,11 +1,15 @@
 ---
 
 - name: Create Matomo DB User (pgsql)
+  become: yes
+  become_user: "{{ matomo_pgsql_user }}"
   postgresql_user:
     name: "{{ matomo_db_user }}"
     password: "{{ matomo_db_password }}"
 
 - name: Create Matomo DB (pgsql)
+  become: yes
+  become_user: "{{ matomo_pgsql_user }}"
   postgresql_db:
     name: "{{ matomo_db_name }}"
     state: present
