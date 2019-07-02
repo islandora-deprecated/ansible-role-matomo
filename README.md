@@ -8,3 +8,7 @@ An Ansible role that installs [Matomo](https://matomo.org/) on:
 
 ## Dependencies
 * Apache
+
+## License
+
+MIT
