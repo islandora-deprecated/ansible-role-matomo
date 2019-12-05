@@ -14,6 +14,10 @@
     name: "{{ matomo_db_name }}"
     target: "{{ webserver_document_root }}/matomo.sql"
     state: import
+    login_host: "{{ matomo_db_host }}"
+    login_port: "{{ matomo_db_port }}"
+    login_user: "{{ matomo_db_root_user }}"
+    login_password:  "{{ matomo_db_root_password }}"
   ignore_errors: yes
   when: motomo_sql_dump_create | changed
 

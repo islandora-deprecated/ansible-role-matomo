@@ -6,6 +6,10 @@
   postgresql_user:
     name: "{{ matomo_db_user }}"
     password: "{{ matomo_db_password }}"
+    login_host: "{{ matomo_db_host }}"
+    login_port: "{{ matomo_db_port }}"
+    login_user: "{{ matomo_db_root_user }}"
+    login_password:  "{{ matomo_db_root_password }}"
 
 - name: Create Matomo DB (pgsql)
   become: yes
@@ -14,6 +18,10 @@
     name: "{{ matomo_db_name }}"
     state: present
     owner: "{{ matomo_db_user }}"
+    login_host: "{{ matomo_db_host }}"
+    login_port: "{{ matomo_db_port }}"
+    login_user: "{{ matomo_db_root_user }}"
+    login_password:  "{{ matomo_db_root_password }}"
   register: matomo_db_exists
 
 
