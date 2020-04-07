@@ -12,7 +12,7 @@ The group meets each Wednesday at 1:00 PM Eastern. Meeting notes and announcemen
 
 ### Use cases
 
-If you would like to submit a use case to the Islandora 8 project, please submit an issue [here](https://github.com/islandora/documentation/issues) using the [Use Case template](https://github.com/Islandora/documentation/wiki/Use-Case-template), prepending "Use Case:" to the title of the issue.
+If you would like to submit a use case to the Islandora 8 project, please submit an issue [here](https://github.com/islandora/documentation/issues/new) using the [Use Case template](https://github.com/Islandora/documentation/wiki/Use-Case-template), prepending "Use Case:" to the title of the issue.
 
 ### Documentation
 
