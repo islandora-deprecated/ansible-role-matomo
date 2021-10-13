@@ -11,15 +11,18 @@ console_install: true
 # Database
 matomo_db: mysql
 matomo_pgsql_user: postgres
+matomo_db_root_user:  "{% if matomo_db == 'mysql' %}root{% elif matomo_db == 'pgsql' %}{{ matomo_pgsql_user }}{% endif %}" 
+matomo_db_root_password: "" 
 matomo_db_user: matomo
 matomo_db_password: islandora
 matomo_db_name: matomo
 matomo_db_driver: "{% if matomo_db == 'mysql' %}pdo_mysql{% elif matomo_db == 'pgsql' %}pdo_pgsql{% endif %}"
 matomo_db_port: "{% if matomo_db == 'mysql' %}3306{% elif matomo_db == 'pgsql' %}5432{% endif %}"
+matomo_db_host: 127.0.0.1 
 
 matomo_db_options:
   driver: "{{ matomo_db_driver }}"
-  host: 127.0.0.1
+  host: "{{ matomo_db_host }}"
   port: "{{ matomo_db_port }}"
   dbname: "{{ matomo_db_name }}"
   user: "{{ matomo_db_user }}"
